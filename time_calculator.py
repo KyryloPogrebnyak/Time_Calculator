@@ -43,7 +43,15 @@ def add_time(start_time, duration, starting_day=None):
     # Determine the day of the week if starting_day is provided
     if starting_day:
         starting_day = starting_day.lower().capitalize()
-        days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        days_of_week = [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+        ]
         starting_day_index = days_of_week.index(starting_day)
         new_day_index = (starting_day_index + days_passed) % 7
         new_day = days_of_week[new_day_index]
